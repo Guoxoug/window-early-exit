@@ -1,0 +1,75 @@
+{
+    "model": {
+        "model_type": "mobilenetv2-1.4-224",
+        "model_params": {
+            "num_classes": 1000,
+            "resolution": 224,
+            "width_mult": 1.4
+        },
+        "weights_path": "models/saved_models/mobilenetv2-1.4-224_imagenet"
+    },
+    "id_dataset": {
+        "name": "imagenet",
+        "datapath": "/path/to/imagenet",
+        "download": false,
+        "batch_size": 1024,
+        "test_batch_size": 128,
+        "num_workers": 4,
+        "drop_last": false,
+        "val_size": 50000,
+        "num_classes": 1000,
+        "idx_path": "misc/imagenet_idx"
+    },
+    "ood_datasets": [
+        {
+            "name": "openimage-o",
+            "datapath": "/path/to/openimage-o",
+            "download": false,
+            "test_batch_size": 512,
+            "num_workers": 4,
+            "drop_last": false
+        },
+        {
+            "name": "inaturalist",
+            "datapath": "/path/to/iNaturalist",
+            "download": false,
+            "test_batch_size": 512,
+            "num_workers": 4,
+            "drop_last": false
+        }
+    ],
+    "train_params": {
+        "num_epochs": 250,
+        "optimizer": "sgd",
+        "optimizer_params": {
+            "lr": 0.2,
+            "momentum": 0.9,
+            "weight_decay": 4e-05
+        },
+        "warmup_epochs": 5,
+        "lr_scheduler": "cosine",
+        "lr_scheduler_params": {
+            "T_max": 245
+        }
+    },
+    "seed": null,
+    "ddp": true,
+    "gpu_id": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ],
+    "test_params": {
+        "ood_data": true,
+        "ood_truncate": false,
+        "results_savedir": "/path/to/results",
+        "results_save": true,
+        "logits_save": true,
+        "features": true
+    }
+}

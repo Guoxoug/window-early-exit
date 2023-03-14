@@ -1,0 +1,13 @@
+*workspace*
+*pyc*
+*lmdb*
+*wandb*
+*.csv*
+*.pdf*
+*.zip*
+*.np*
+*log.txt
+*.out
+*logs*
+*ckpt*
+*tar*
