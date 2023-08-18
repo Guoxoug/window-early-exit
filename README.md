@@ -1,7 +1,24 @@
-# Window-Based Early-Exit Cascades for Uncertainty Estimation: When Deep Ensembles are More Efficient than Single Models
+# Window-Based Early-Exit Cascades for Uncertainty Estimation: When Deep Ensembles are More Efficient than Single Models (ICCV 2023)
 
-This repository contains code to reproduce the results our paper.
+![alt text](cascade-diagram.png)
 
+This repository contains code to reproduce the results in our [paper](https://arxiv.org/abs/2303.08010). If you found either the paper or the code useful please consider citing it:
+
+```bibtex
+@InProceedings{Xia_2023_ICCV,
+    author    = {Xia, Guoxuan and Bouganis, Christos-Savvas},
+    title     = {Window-Based Early-Exit Cascades for Uncertainty Estimation: When Deep Ensembles are More Efficient than Single Models},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+}
+```
+
+
+
+## ImageNet Results
+
+<img src="imagenet-sc-results.png" alt="drawing" width="400"/>
 
 ## Requirements
 The main requirements for this repository are:
